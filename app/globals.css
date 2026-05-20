@@ -11,3 +11,19 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+/* 
+.right-side::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 100vh;
+  background: rgb(255, 102, 0);
+
+  clip-path: ellipse(70% 70% at 0% 50%);
+} */
+
+.right-side::after {
+  border-radius: 20% 0% 0% 20% / 50% 0% 0% 50%;
+}

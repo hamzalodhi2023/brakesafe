@@ -54,12 +54,24 @@ function Page() {
       </div>
 
       {/* RIGHT SIDE */}
-      <div className="relative w-[45vw] h-screen bg-white   shadow-2xl z-10 overflow-hidden">
+      <div className="right-side relative w-[45vw] h-screen bg-white shadow-2xl z-10 overflow-hidden rounded-[10%_0%_0%_10%/50%_0_0_50%]">
         {/* 🔶 Orange Side Element */}
-        <div className="absolute top-0 l  eft-0 h-full w-62 bg-orange-500 [clip-path:path('M0,0_H100_Q70,50_100,100_H0_Z')]" />
-
+        {/* <div className="absolute top-0 left-0 h-screen w-62 bg-orange-500 [clip-path:path('M0,0_H100_Q70,50_100,100_H0_Z')]" /> */}
+        <svg
+          className="absolute -left-7 top-0"
+          xmlns="http://www.w3.org/2000/svg"
+          width="111"
+          height="full"
+          viewBox="0 0 111 937"
+          fill="none"
+        >
+          <path
+            d="M99.4642 -0.739948C-34.9064 410.424 50.6438 813.863 110.215 964.188C81.3823 942.06 56.1779 891.056 47.1798 868.321C11.3374 801.666 -6.08419 621.03 -10.3147 539.043C-11.3008 450.532 -7.56572 249.894 15.2642 155.435C38.094 60.9754 80.91 11.9602 99.4642 -0.739948Z"
+            fill="#FF6206"
+          />
+        </svg>
         {/* Content */}
-        <div className="relative p-8 z-10 border flex items-start justify-center flex-col gap-[32] ">
+        <div className="relative p-8 pl-12 z-10 flex items-start justify-center flex-col gap-[32]">
           {/* logo and button div */}
           <div className="flex items-center w-full justify-between">
             {/* logo */}
@@ -94,7 +106,7 @@ function Page() {
             </p>
           </div>
           {/* form */}
-          <form className="w-full flex items-start gap-4.75 justify-center flex-col border">
+          <form className="w-full flex items-start gap-4.75 justify-center flex-col ">
             {/* email */}
             <div className="w-full">
               <label className="text-[#4A4A4A]">Email</label>
