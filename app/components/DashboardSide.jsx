@@ -25,7 +25,7 @@ function DashboardSide() {
           <li className="text-[14px] w-full text-left font-semibold px-3.75">
             Menu
           </li>
-          <li className="h-10 w-full py-3 px-4 relative after:content-[''] after:absolute after:top-0 after:left-0 after:bg-orange-500 after:w-1.5 after:h-full after:rounded-tr-2xl after:rounded-br-2xl flex items-center justify-space-between">
+          <li className="h-10 w-full gap-2 py-3 px-4 relative after:content-[''] after:absolute after:top-0 after:left-0 after:bg-orange-500 after:w-1.5 after:h-full after:rounded-tr-2xl after:rounded-br-2xl flex items-center justify-space-between">
             <LuLayoutDashboard /> <p>Dashboard</p>
           </li>
           <li></li>
