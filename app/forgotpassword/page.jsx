@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { useState } from "react";
 import {
   LuZap,
@@ -91,41 +90,15 @@ function Page() {
                 </p>
               </div>
             </div>
-            {/* Buttons */}
-            <div className="flex bg-gray-200 p-1 rounded-lg w-fit relative">
-              {/* sliding background */}
-              <div
-                className={`absolute top-1 bottom-1 w-24 rounded-md bg-[#001E47] transition-all duration-300 ease-in-out ${
-                  register ? "left-24" : "left-1"
-                }`}
-              />
-
-              <button
-                onClick={() => setRegister(false)}
-                className={`relative z-10 h-11.25 w-24 rounded-lg transition-all duration-200 ${
-                  !register ? "text-white scale-105" : "text-[#4A4A4A]"
-                }`}
-              >
-                Log In
-              </button>
-
-              <button
-                onClick={() => setRegister(true)}
-                className={`relative z-10 h-11.25 w-24 rounded-lg transition-all duration-200 ${
-                  register ? "text-white scale-105" : "text-[#4A4A4A]"
-                }`}
-              >
-                Register
-              </button>
-            </div>
           </div>
           {/* welcome div */}
           <div>
             <h2 className="text-[#1E1E1E] text-[32px] font-semibold">
-              Welcome back
+              Forgot Password?
             </h2>
             <p className="text-[#4A4A4A] text-[16px] font-semibold  ">
-              Sign in to access your dashboard
+              Enter you registered email address to verify your identity before
+              resetting the password.
             </p>
           </div>
           {/* form */}
@@ -140,50 +113,18 @@ function Page() {
                 placeholder="you@example.com"
               />
             </div>
-            {/* Password */}
-            <div className="w-full">
-              <label className="text-[#4A4A4A]">Password</label>
-              <div className="flex items-center w-full">
-                <input
-                  type={showPassword ? "text" : "password"}
-                  className="w-full text-[14px] px-4 h-12 bg-[#F7F7F7] border border-[#E3DBDB] rounded-l-xl focus:outline-none focus:border-orange-500"
-                  placeholder="Enter Password"
-                />
-
-                {showPassword ? (
-                  <LuEye
-                    onClick={() => setShowPassword(false)}
-                    className="h-12 w-10 p-2 bg-[#F7F7F7] border border-l-0 border-[#E3DBDB] rounded-r-xl cursor-pointer text-[20px]"
-                  />
-                ) : (
-                  <LuEyeOff
-                    onClick={() => setShowPassword(true)}
-                    className="h-12 w-10 p-2 bg-[#F7F7F7] border border-l-0 border-[#E3DBDB] rounded-r-xl cursor-pointer text-[20px]"
-                  />
-                )}
-              </div>
-            </div>
-            {/* forgot button */}
-            <div className="w-full flex items-center justify-end ">
-              <Link
-                href="/forgotpassword"
-                className="text-[#001E47] text-[16px] font-semibold"
-              >
-                Forgot Password?
-              </Link>
-            </div>
             {/* login button */}
             <button
               type="submit"
               className="w-full flex items-center justify-center bg-[#FF6206] text-white py-3 rounded-xl"
             >
-              Sign In <LuArrowRight />
+              Get Verification Link <LuArrowRight />
             </button>
           </form>
           <div className="w-full flex items-center justify-center gap-2">
-            <p className="text-[#4A4A4A]">Are you a testing centre?</p>
+            <p className="text-[#4A4A4A]">Remembered Password?</p>
             <button className="text-[#001E47] text-[16px] font-semibold">
-              Sign In Here
+              Back to Sign in
             </button>
           </div>
         </div>
