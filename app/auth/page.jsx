@@ -133,7 +133,7 @@ function Page() {
             <div className="w-full">
               <label className="text-[#4A4A4A]">Email</label>
               <input
-                type="text"
+                type="email"
                 className="w-full text-[14px] px-4.75 h-12.5 bg-[#F7F7F7] rounded-xl border border-[#E3DBDB] 
   focus:outline-none focus:border-orange-500"
                 placeholder="you@example.com"
