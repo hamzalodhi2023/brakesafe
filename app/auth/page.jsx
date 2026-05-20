@@ -1,13 +1,17 @@
-import React from "react";
+"use client";
+import { useState } from "react";
 import {
   LuZap,
   LuChartCandlestick,
   LuSparkles,
   LuEye,
+  LuEyeOff,
   LuArrowRight,
 } from "react-icons/lu";
 
 function Page() {
+  const [register, setRegister] = useState(true);
+  const [showPassword, setShowPassword] = useState(false);
   return (
     <div className="bg-div w-full min-h-screen flex">
       {/* LEFT SIDE */}
@@ -56,7 +60,7 @@ function Page() {
       {/* RIGHT SIDE */}
       <div className="right-side relative w-[45vw] h-screen bg-white shadow-2xl z-10 overflow-hidden rounded-[10%_0%_0%_10%/50%_0_0_50%]">
         {/* 🔶 Orange Side Element */}
-        {/* <div className="absolute top-0 left-0 h-screen w-62 bg-orange-500 [clip-path:path('M0,0_H100_Q70,50_100,100_H0_Z')]" /> */}
+        {/* <div className="orange-div" /> */}
         <svg
           className="absolute -left-7 top-0"
           xmlns="http://www.w3.org/2000/svg"
@@ -87,11 +91,29 @@ function Page() {
               </div>
             </div>
             {/* Buttons */}
-            <div className="border border-[#E3DBDB] p-2 gap-3 flex items-center justify-between rounded-xl">
-              <button className="bg-[#001E47] text-white rounded-lg h-11.25 w-24">
+            <div className="flex bg-gray-200 p-1 rounded-lg w-fit relative">
+              {/* sliding background */}
+              <div
+                className={`absolute top-1 bottom-1 w-24 rounded-md bg-[#001E47] transition-all duration-300 ease-in-out ${
+                  register ? "left-24" : "left-1"
+                }`}
+              />
+
+              <button
+                onClick={() => setRegister(false)}
+                className={`relative z-10 h-11.25 w-24 rounded-lg transition-all duration-200 ${
+                  !register ? "text-white scale-105" : "text-[#4A4A4A]"
+                }`}
+              >
                 Log In
               </button>
-              <button className=" text-[#4A4A4A] rounded-lg h-11.25 w-24">
+
+              <button
+                onClick={() => setRegister(true)}
+                className={`relative z-10 h-11.25 w-24 rounded-lg transition-all duration-200 ${
+                  register ? "text-white scale-105" : "text-[#4A4A4A]"
+                }`}
+              >
                 Register
               </button>
             </div>
@@ -112,20 +134,32 @@ function Page() {
               <label className="text-[#4A4A4A]">Email</label>
               <input
                 type="text"
-                className="w-full text-[14px] px-4.75 h-12.5 bg-[#F7F7F7] rounded-xl border border-[#E3DBDB]"
+                className="w-full text-[14px] px-4.75 h-12.5 bg-[#F7F7F7] rounded-xl border border-[#E3DBDB] 
+  focus:outline-none focus:border-orange-500"
                 placeholder="you@example.com"
               />
             </div>
             {/* Password */}
             <div className="w-full">
               <label className="text-[#4A4A4A]">Password</label>
-              <div className="w-full flex items-center justify-center">
+              <div className="flex items-center w-full">
                 <input
-                  type="text"
-                  className="w-full text-[14px] px-4.75 h-12.5 bg-[#F7F7F7] rounded-l-xl rounded-b-xl rounded-top-xl rounded-br-none border border-[#E3DBDB]"
+                  type={showPassword ? "text" : "password"}
+                  className="w-full text-[14px] px-4 h-12 bg-[#F7F7F7] border border-[#E3DBDB] rounded-l-xl focus:outline-none focus:border-orange-500"
                   placeholder="Enter Password"
                 />
-                <LuEye className="h-12.5 bg-[#F7F7F7] border-t border-[#E3DBDB] border-r border-b text-[20px] w-10 p-2" />
+
+                {showPassword ? (
+                  <LuEye
+                    onClick={() => setShowPassword(false)}
+                    className="h-12 w-10 p-2 bg-[#F7F7F7] border border-l-0 border-[#E3DBDB] rounded-r-xl cursor-pointer text-[20px]"
+                  />
+                ) : (
+                  <LuEyeOff
+                    onClick={() => setShowPassword(true)}
+                    className="h-12 w-10 p-2 bg-[#F7F7F7] border border-l-0 border-[#E3DBDB] rounded-r-xl cursor-pointer text-[20px]"
+                  />
+                )}
               </div>
             </div>
             {/* forgot button */}
