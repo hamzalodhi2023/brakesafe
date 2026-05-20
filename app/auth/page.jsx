@@ -56,7 +56,7 @@ function Page() {
       {/* RIGHT SIDE */}
       <div className="relative w-[45vw] h-screen bg-white   shadow-2xl z-10 overflow-hidden">
         {/* 🔶 Orange Side Element */}
-        <div className="absolute top-0 l  eft-0 h-full w-62 bg-orange-500 rounded-[0%_10%_10%_0%/0%_50%_50%_0%]" />
+        <div className="absolute top-0 l  eft-0 h-full w-62 bg-orange-500 [clip-path:path('M0,0_H100_Q70,50_100,100_H0_Z')]" />
 
         {/* Content */}
         <div className="relative p-8 z-10 border flex items-start justify-center flex-col gap-[32] ">
