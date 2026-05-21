@@ -8,12 +8,14 @@ import {
   LuCirclePercent,
   LuCog,
   LuLogOut,
+  LuMail,
+  LuChevronRight,
 } from "react-icons/lu";
 import { IoIosNotificationsOutline } from "react-icons/io";
 
 function DashboardSide() {
   return (
-    <div className="w-[20%] h-full rounded-3xl py-5 bg-[#F7F7F7]">
+    <div className="w-[20%] shadow-[0_0_15.2px_0_rgba(0,0,0,0.15)] flex items-center justify-between flex-col h-full rounded-3xl py-5 bg-[#F7F7F7]">
       {/* top div */}
       <div className="flex items-start justify-center flex-col gap-6.25">
         {/* logo div */}
@@ -97,7 +99,28 @@ function DashboardSide() {
         </ul>
       </div>
       {/* bottom div */}
-      <div></div>
+      <div className="w-full flex items-center gap-3.75 justify-between flex-col py-3.75 px-3.75">
+        <button className="w-54 text-white flex items-center justify-between py-3 px-4 bg-[#FF6206] rounded-[14px]">
+          <div className="flex items-start gap-3 justify-between w-31.5">
+            <LuMail className="text-xl" />
+            <p>Contact Us</p>
+          </div>
+          <LuChevronRight />
+        </button>
+        <div className="Organic-pattern bg-[#010B1A] w-full py-3.75 px-2.5 flex items-center justify-center flex-col gap-2.5 rounded-2xl bg">
+          <div className="w-full flex items-center justify-center gap-[8.13px]">
+            <img
+              src="./user.jpg"
+              alt=""
+              className="rounded-2xl w-[47.438px] h-[47.438px] border-[1.355px] border-[#E3DBDB]"
+            />
+            <p className="font-bold text-[18px] text-white">John Doe</p>
+          </div>
+          <p className="text-center text-[12px] text-white font-normal">
+            johndoe12345@email.com
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

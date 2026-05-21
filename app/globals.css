@@ -11,3 +11,10 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.Organic-pattern {
+  background-image: url(../public/Organic-pattern-6.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
