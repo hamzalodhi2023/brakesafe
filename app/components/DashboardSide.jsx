@@ -1,5 +1,15 @@
 import React from "react";
-import { LuLayoutDashboard } from "react-icons/lu";
+import {
+  LuLayoutDashboard,
+  LuWrench,
+  LuTruck,
+  LuCalendar,
+  LuCaravan,
+  LuCirclePercent,
+  LuCog,
+  LuLogOut,
+} from "react-icons/lu";
+import { IoIosNotificationsOutline } from "react-icons/io";
 
 function DashboardSide() {
   return (
@@ -23,16 +33,67 @@ function DashboardSide() {
 
         <ul className="relative flex items-center justify-center flex-col gap-1">
           <li className="text-[14px] w-full text-left font-semibold px-3.75">
-            Menu
+            MENU
           </li>
           <li className="h-10 w-full gap-2 py-3 px-4 relative after:content-[''] after:absolute after:top-0 after:left-0 after:bg-orange-500 after:w-1.5 after:h-full after:rounded-tr-2xl after:rounded-br-2xl flex items-center justify-space-between">
-            <LuLayoutDashboard /> <p>Dashboard</p>
+            <LuLayoutDashboard className="text-[#FF6206] text-xl font-semibold" />
+            <p className="text-[14px] font-bold">Dashboard</p>
           </li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+
+          <li className="h-10 w-full gap-2 py-3 px-4 relative flex items-center justify-space-between">
+            <LuWrench className="text-[#4A4A4A] text-xl font-normal" />
+            <p className="text-[14px] font-normal text-[#4A4A4A]">
+              Test Centers
+            </p>
+          </li>
+
+          <li className="h-10 w-full gap-2 py-3 px-4 relative flex items-center justify-space-between">
+            <LuCalendar className="text-[#4A4A4A] text-xl font-normal" />
+            <p className="text-[14px] font-normal text-[#4A4A4A]">
+              My Bookings
+            </p>
+          </li>
+
+          <li className="h-10 w-full gap-2 py-3 px-4 relative flex items-center justify-space-between">
+            <LuTruck className="text-[#4A4A4A] text-xl font-normal" />
+            <p className="text-[14px] font-normal text-[#4A4A4A]">
+              My Vehicles
+            </p>
+          </li>
+
+          <li className="h-10 w-full gap-2 py-3 px-4 relative flex items-center justify-space-between">
+            <LuCaravan className="text-[#4A4A4A] text-xl font-normal" />
+            <p className="text-[14px] font-normal text-[#4A4A4A]">
+              My Trailers
+            </p>
+          </li>
+
+          <li className="h-10 w-full gap-2 py-3 px-4 relative flex items-center justify-space-between">
+            <LuCirclePercent className="text-[#4A4A4A] text-xl font-normal" />
+            <p className="text-[14px] font-normal text-[#4A4A4A]">Invoices</p>
+          </li>
+        </ul>
+        <ul className="relative flex items-center justify-center flex-col gap-1">
+          <li className="text-[14px] w-full text-left font-semibold px-3.75">
+            GENERAL
+          </li>
+
+          <li className="h-10 w-full gap-2 py-3 px-4 relative flex items-center justify-space-between">
+            <LuCog className="text-[#4A4A4A] text-xl font-normal" />
+            <p className="text-[14px] font-normal text-[#4A4A4A]">Settings</p>
+          </li>
+
+          <li className="h-10 w-full gap-2 py-3 px-4 relative flex items-center justify-space-between">
+            <IoIosNotificationsOutline className="text-[#4A4A4A] text-xl font-normal" />
+            <p className="text-[14px] font-normal text-[#4A4A4A]">
+              Notifications
+            </p>
+          </li>
+
+          <li className="h-10 w-full gap-2 py-3 px-4 relative flex items-center justify-space-between">
+            <LuLogOut className="text-[#EF4444] text-xl font-normal" />
+            <p className="text-[14px] font-normal text-[#EF4444]">Logout</p>
+          </li>
         </ul>
       </div>
       {/* bottom div */}
